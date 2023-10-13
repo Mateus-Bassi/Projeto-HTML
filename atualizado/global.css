@@ -1,0 +1,119 @@
+/* Resetando os valores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Centraliza os elementos */
+.center {
+    max-width: 1280px;
+    padding: 0 2%;
+    margin: 0 auto;
+}
+
+/* Limpa os floats para não causar conflitos */
+.clear {
+    clear: both;
+}
+
+/* Realiza float left do elemento */
+.left{
+    float: left;
+}
+
+/* Realiza float right do elemento */
+.right{
+    float: right;
+}
+
+/* Cabeçalho padrão */
+header {
+    background-color: #3D437A;
+    padding: 20px 0;
+}
+
+header .logo{
+    font-size: 25px;
+    text-transform: uppercase;
+    color: white;
+}
+
+nav.desktop ul{
+    list-style: none; /*Ficar sem as bolinhas*/
+    position: relative;
+    top: 6px;
+}
+
+/* Estilizando cada elemento do nosso menu */
+nav.desktop li{
+    font-size: 15px;
+    padding: 0 30px; /*Para não ficarem coladas*/
+    text-transform: uppercase;
+    display: inline-block; /*Para ficarem do lado uma da outra*/
+}
+
+/* Deixando o elemento do menu com a cor branca */
+nav.desktop a{
+    color: white;
+    text-decoration: none;
+}
+
+/* Local onde estará a imagem de fundo */
+.banner-principal{
+    width: 100%;
+    height: 800px;
+    background-image: url(testando.jpg);
+    background-size: cover; /*Cobrir toda a tela*/
+    position: relative;
+}
+
+/* Película escura em cima da imagem */
+.overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 15, 15, 0.7);
+    z-index: 1;
+}
+
+footer{
+    background-color: #3D437A;
+    padding: 20px 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+footer p{
+    font-size: 15px;
+    color: white;
+    text-align: center;
+}
+
+/* Ajuste de acordo com o tamanho da tela */
+@media screen and (max-width: 767px) {
+    nav.desktop ul {
+        display: none; /* ocultar menu desktop */
+    }
+
+    /* .banner-principal {
+        height: 1000px;
+    } */
+
+    header, footer {
+        padding: 10px 0;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    nav.desktop li {
+        padding: 0 15px;
+    }
+
+    .banner-principal {
+        height: 600px;
+    }
+}
