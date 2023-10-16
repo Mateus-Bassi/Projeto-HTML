@@ -27,10 +27,28 @@
     float: right;
 }
 
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
 /* Cabeçalho padrão */
 header {
     background-color: #3D437A;
     padding: 20px 0;
+    z-index: 100;
+    position: relative;
 }
 
 header .logo{
@@ -60,31 +78,34 @@ nav.desktop a{
 }
 
 /* Local onde estará a imagem de fundo */
-.banner-principal{
-    width: 100%;
-    height: 800px;
-    background-image: url(testando.jpg);
-    background-size: cover; /*Cobrir toda a tela*/
-    position: relative;
+.banner-principal {
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+    height: 100vh;            
+    background-image: url('testando.jpg'); 
+    background-size: cover;   
+    background-position: center;
+    position: relative; /* Adicione essa propriedade para o overlay se basear neste contêiner */
 }
 
 /* Película escura em cima da imagem */
-.overlay{
-    position: absolute;
-    left: 0;
-    top: 0;
+.overlay {
     width: 100%;
     height: 100%;
-    background-color: rgba(15, 15, 15, 0.7);
-    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5); /* fundo escuro com transparência */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0; /* para garantir que o overlay fique abaixo do formulário */
 }
 
-footer{
+footer {
     background-color: #3D437A;
     padding: 20px 0;
-    bottom: 0;
-    width: 100%;
-    z-index: 10;
+    color: white;
+    text-align: center;
+    clear: both;
 }
 
 footer p{
@@ -99,10 +120,6 @@ footer p{
         display: none; /* ocultar menu desktop */
     }
 
-    /* .banner-principal {
-        height: 1000px;
-    } */
-
     header, footer {
         padding: 10px 0;
     }
@@ -111,9 +128,5 @@ footer p{
 @media screen and (max-width: 1024px) and (min-width: 768px) {
     nav.desktop li {
         padding: 0 15px;
-    }
-
-    .banner-principal {
-        height: 600px;
     }
 }
