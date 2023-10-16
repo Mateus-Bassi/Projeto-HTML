@@ -2,15 +2,22 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <!--Controle a renderização em dispositivos movéis-->
     <title>Teste</title>
     <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="global.css">
+    <!--São referencias dos arquivos externos css (login e "global")-->
 </head>
 <body>
+
+    <!--Cabeçalho-->
+
     <header>
         <div class="center">
+            <!--Aqui centraliza o cabeçalho-->
             <div class="logo left">Logomarca</div>
+                <!--Aqui utiliza a estilização do arquivo externo "css global" para manter a letra padrão-->
             <nav class="desktop right">
                 <ul>
                     <li><a href="index.html">HOME</a></li>
@@ -18,33 +25,50 @@
                     <li><a href="login.html">LOGIN</a></li>
                     <li><a href="relatorio.html">RELATÓRIO</a></li>
                 </ul>
+                <!--São links de outras paginas-->
             </nav>
             <div class="clear"></div>
+            <!--Aqui limpa a parte esquerda do site limpando os floats para não causar problemas -->
         </div> 
     </header>
 
+    <!--Seção Principal-->
+
     <main>
         <section class="banner-principal">
+            <!--Nessa sessão utiliza a classe do arquivo externo css global com as dimensões-->
             <div class="overlay"></div> 
-            <div class="center">
+            <!--A classe para sobrepor a imagem escurencendo o fundo da página-->
                 <div class="container-form">
+                    <!--Uma classe que contem os elementos declarados do arquivo externo css-->
                     <h2>Login</h2>
+                    <!--Titulo-->
                     <p>Bem-Vindo</p>
-                    <form action="#">
+                    <!--Paragrafo-->
+                    <form action="">
+                        <!--O formulário com os dados na pagina-->
                         <input type="text" name="email" placeholder="Entre com o seu e-mail">
+                        <!--Este é um campo de entrada de texto para o e-mail-->
                         <input type="password" name="senha" placeholder="Entre com a senha">
+                        <!--Este é um campo de entrada de senha-->
 
                         <a href="login2.html" class="btn">Login</a>
+                        <!--Este é um link estilizado como um botão para submeter o formulário-->
+                        <!--A classe "btn" estiliza este link para que pareça um botão-->
                     </form>
                 </div>
             </div> 
         </section> 
     </main>
+
+    <!--Rodapé-->
+
     <footer>
         <div class="center">
+            <!--Aqui centraliza o rodapé-->
             <p>Todos os direitos Reservados</p>
         </div>
     </footer>
-
+    
 </body>
 </html>
