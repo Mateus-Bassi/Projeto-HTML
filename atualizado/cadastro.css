@@ -1,5 +1,5 @@
 .container-form {
-    position: relative;
+    position: absolute;
     width: 100%;
     max-width: 800px;
     background-color: rgba(255, 255, 255, 1);
@@ -112,13 +112,14 @@
     .container-form {
         flex-grow: 1;
         padding: 10px;
-        margin-top: 180px;
+        top: 0;
         overflow-y: auto;   
     }
 
     footer {
-        position: sticky;
+        position: absolute;
         bottom: 0;
+        top: 0;
         clear: both;
     }
 
