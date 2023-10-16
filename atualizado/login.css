@@ -1,74 +1,82 @@
+
 .container-form {
+    /* Define a largura da div */
     width: 100%;
-    max-width: 800px;
-    min-width: 200px;
-    z-index: 2;
-    position: absolute;
-    left: 50%;
-    top: 15%;
-    background-color: white;
-    padding: 20px;
+    max-width: 800px; 
+    min-width: 200px; 
+    z-index: 2; 
+    position: absolute; 
+    left: 50%; /* Alinha à metade da largura do elemento pai */
+    top: 15%; /* Define a posição vertical a 15% do elemento pai */
+    background-color: white; 
+    padding: 20px; /* Preenchimento interno */
     border-radius: 10px;
-    margin-bottom: 50px;
-    transform: translateX(-50%); 
+    margin-bottom: 50px; 
+    transform: translateX(-50%); /* Centraliza horizontalmente */
 }
+
 
 .container-form h2 {
-    color: #3D437A;
-    font-size: 30px;
-    text-align: center;
-    margin-bottom: 10px;
+    color: #3D437A; 
+    font-size: 30px; 
+    text-align: center; 
+    margin-bottom: 10px; 
 }
+
 
 .container-form p {
-    font-size: 20px;
-    text-align: center;
-    margin-top: 5px;
+    font-size: 20px; 
+    text-align: center; 
+    margin-top: 5px; 
 }
 
+
 .container-form form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: flex; /* Usa flexbox para o layout */
+    flex-wrap: wrap; /* Permite a quebra de linha dos elementos flexíveis */
+    justify-content: space-between; /* Espaçamento uniforme entre os elementos */
 }
+
 
 .container-form form input[name=email],
 .container-form form input[name=senha] {
-    flex: 1 1 100%; /* Utilizando flex shorthand */
-    height: 40px;
-    margin-top: 10px;
-    background: white;
+    flex: 1 1 100%; /* Utiliza flexbox */
+    height: 40px; 
+    margin-top: 10px; 
+    background: white; 
     color: #333;
-    font-size: 15px;
-    padding-left: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    font-size: 15px; 
+    padding-left: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
 }
 
+
 .btn {
-    margin-top: 20px;
-    display: inline-block;
-    background-color: #00C59E;
-    color: white;
-    cursor: pointer;
-    font-size: 22px;
+    margin-top: 20px; /* Margem superior */
+    display: inline-block; 
+    background-color: #00C59E; 
+    color: white; 
+    cursor: pointer; 
+    font-size: 22px; 
     padding: 10px 20px;
-    border: 0;
-    border-radius: 5px;
-    text-decoration: none;
-    text-align: center;
+    border: 0; 
+    border-radius: 5px; 
+    text-decoration: none; /* Sem decoração de texto */
+    text-align: center; /* Alinhamento de texto */
 }
+
 
 @media (min-width: 768px) {
     .container-form form input {
-        width: calc(33.33% - 10px);
+        width: calc(33.33% - 10px); /* Largura dos campos de entrada */
     }
     .container-form form input[type=text],
     .container-form form input[type=password] {
-        width: calc(50% - 10px);
+        width: calc(50% - 10px); /* Largura dos campos de entrada específicos */
     }
 
     .container-form form a {
-        width: 100%;
+        width: 100%; /* Largura do link dentro do formulário */
     }
 }
