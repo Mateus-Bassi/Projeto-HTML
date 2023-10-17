@@ -1,6 +1,5 @@
 
 .container-form {
-    /* Define a largura da div */
     width: 100%;
     max-width: 800px; 
     min-width: 200px; 
@@ -53,8 +52,8 @@
 
 
 .btn {
-    margin-top: 20px; /* Margem superior */
-    display: inline-block; 
+    margin-top: 20px; 
+    display: inline-block; /*Permite que o elemento se comporte como um elemento de bloco, ocupando uma linha*/
     background-color: #00C59E; 
     color: white; 
     cursor: pointer; 
@@ -69,21 +68,21 @@
 @media (max-width: 768px) { /*largura da tela for igual ou inferior a 768 pixels*/
     header {
         position: sticky; /*Ficará grudado no topo da janela do navegador à medida que você rola para baixo na página*/
-        top: 0; /*Ficara no topo da janela do navegador*/
+        top: 0; 
     }
 
     .container-form {
         flex-grow: 1; /* Faz com que o elemento cresça e use todo o espaço disponível no contêiner flexível */
-        padding: 20px; /* Define um preenchimento interno */
-        top: 20%; /* Define a distância do topo como 20% da altura */
+        padding: 20px; 
+        top: 20%; 
         overflow-y: auto; /* Habilita a rolagem vertical dentro do elemento se o conteúdo exceder a altura */
     }
     
     .container-form form input[name=senha],
     .container-form form input[name=email] {
         flex-basis: 100%; /* Estabelece a base flexível para 100% (largura total) */
-        margin-right: 0; /* Remove a margem direita */
-        margin-left: 0; /* Remove a margem esquerda */
+        margin-right: 0;
+        margin-left: 0; 
     }
 
     .btn {
