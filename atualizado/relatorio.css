@@ -1,3 +1,31 @@
-.tabela{
-    background-color: green;
+table{
+    width: 100%;
+    border-collapse: collapse;
 }
+td, th{
+    text-align: left;
+    padding: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.425);
+    text-align: center;
+}
+.relatorio_cadastro{
+    
+    
+    overflow-y: auto;   
+    margin: auto;
+    width: 100%; 
+    background-color: white;
+    z-index: 10;
+    color:  #3D437A;
+    padding: 10 px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px; 
+    border-color: rgb(81, 255, 0);
+    
+}
+h1{
+    text-align: center;
+    
+    
+}
+
