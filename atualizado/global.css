@@ -32,10 +32,6 @@ body, html {
     margin: 0;
 }
 
-.page-wrapper {
-    display: flex;
-    flex-direction: column;
-}
 
 body {
     font-family: Arial, sans-serif;
