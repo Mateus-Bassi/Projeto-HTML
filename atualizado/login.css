@@ -48,7 +48,7 @@
     font-size: 15px; 
     padding-left: 10px; 
     border: 1px solid #ccc; 
-    border-radius: 5px; 
+    border-radius: 5px; /* Arredonda as bordas */
 }
 
 
