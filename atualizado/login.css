@@ -4,10 +4,10 @@
     width: 100%;
     max-width: 800px; 
     min-width: 200px; 
-    z-index: 2; 
-    position: absolute; 
-    left: 50%; /* Alinha à metade da largura do elemento pai */
-    top: 15%; /* Define a posição vertical a 15% do elemento pai */
+    z-index: 2; /* Define a ordem de empilhamento para sobreposição de elementos */
+    position: absolute; /*colocar em um lugar muito específico na página o elemento principal*/
+    left: 50%; /* Alinha à metade da largura  */
+    top: 15%; /* Define a posição vertical a 15%*/
     background-color: white; 
     padding: 20px; /* Preenchimento interno */
     border-radius: 10px;
@@ -66,14 +66,41 @@
     text-align: center; /* Alinhamento de texto */
 }
 
+@media (max-width: 768px) { /*largura da tela for igual ou inferior a 768 pixels*/
+    header {
+        position: sticky; /*Ficará grudado no topo da janela do navegador à medida que você rola para baixo na página*/
+        top: 0; /*Ficara no topo da janela do navegador*/
+    }
+
+    .container-form {
+        flex-grow: 1; /* Faz com que o elemento cresça e use todo o espaço disponível no contêiner flexível */
+        padding: 20px; /* Define um preenchimento interno */
+        top: 20%; /* Define a distância do topo como 20% da altura */
+        overflow-y: auto; /* Habilita a rolagem vertical dentro do elemento se o conteúdo exceder a altura */
+    }
+    
+    .container-form form input[name=senha],
+    .container-form form input[name=email] {
+        flex-basis: 100%; /* Estabelece a base flexível para 100% (largura total) */
+        margin-right: 0; /* Remove a margem direita */
+        margin-left: 0; /* Remove a margem esquerda */
+    }
+
+    .btn {
+        font-size: 18px; /* Define o tamanho da fonte do botão como 18 pixels */
+        padding: 10px 45.5%; /* Define o preenchimento do botão */
+        text-align: center; /* Centraliza o texto dentro do botão */
+    }
+    
+}
 
 @media (min-width: 768px) {
     .container-form form input {
         width: calc(33.33% - 10px); /* Largura dos campos de entrada */
     }
-    .container-form form input[type=text],
-    .container-form form input[type=password] {
-        width: calc(50% - 10px); /* Largura dos campos de entrada específicos */
+    .container-form form input[type="text"],
+    .container-form form input[type="password"] {
+        width: calc(33.33% - 10px); /* Largura dos campos de entrada específicos */
     }
 
     .container-form form a {
