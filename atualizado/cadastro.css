@@ -7,6 +7,7 @@
     z-index: 1;
     margin: 0 auto;
     overflow-y: auto;
+    border-radius: 3%;
 }
 
 .container-form h2 {
@@ -22,14 +23,14 @@
 }
 
 .container-form form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    display: flex; 
+    flex-wrap: wrap; /*Mudar de linha quando não couberem na mesma linha*/
+    justify-content: space-around; /*Distribuindo o espaço igualmente ao redor dos elementos filhos*/
 }
 
 .container-form form input,
 .container-form form select {
-    flex-grow: 1;
+    flex-grow: 1; /*Os campos devem crescer igualmente e preencher todo o espaço disponível*/
     height: 40px;
     margin-top: 10px;
     background: white;
@@ -42,57 +43,56 @@
 
 .container-form form input[name=name],
 .container-form form input[name=email]{
-    flex-basis: 100%;
+    flex-basis: 100%; /*Tamanho dos elementos*/
 }
 
 .container-form form input[name=CPF],
 .container-form form input[name=Senha],
 .container-form form input[name=telefone]{
-    flex-basis: 45%;
+    flex-basis: 45%; /*Tamanho dos elementos*/
     margin-right: 5px;
 }
 
 .container-form form input[name=CEP],
 .container-form form input[name=Senha2],
 .container-form form input[name=DatadeNascimento]{
-    flex-basis: 45%;
+    flex-basis: 45%;/*Tamanho dos elementos*/
     margin-left: 5px;
 }
 
 .container-form form input[name=endereco]{
-    flex-basis: 80%;
+    flex-basis: 80%;/*Tamanho dos elementos*/
     margin-right: 5px;
 }
 
 .container-form form input[name=numero]{
-    flex-basis: 15%;
+    flex-basis: 15%;/*Tamanho dos elementos*/
     margin-left: 5px;
 }
 
 .container-form form input[name=cidade],
 .container-form form select[name=genero]{
-    flex-basis: 30%;
+    flex-basis: 30%;/*Tamanho dos elementos*/
     margin-right: 5px;
 }
 
 .container-form form select[name=estado],
 .container-form form input[name=profissao]{
-    flex-basis: 30%;
+    flex-basis: 30%;/*Tamanho dos elementos*/
     margin: 10px 5px 0;
 }
 
 .container-form form input[name=pais],
 .container-form form select[name=estadoCivil]{
-    flex-basis: 30%;
+    flex-basis: 30%;/*Tamanho dos elementos*/
     margin-left: 5px;
 }
 
 .btn {
     margin-top: 20px;
-    display: inline-block;
     background-color: #00C59E;
     color: white;
-    cursor: pointer;
+    cursor: pointer; /*Muda o cursor do mouse*/
     font-size: 22px;
     padding: 10px 20px;
     border: 0;
@@ -114,13 +114,6 @@
         padding: 10px;
         top: 0;
         overflow-y: auto;   
-    }
-
-    footer {
-        position: absolute;
-        bottom: 0;
-        top: 0;
-        clear: both;
     }
 
     .container-form form input[name=name],
